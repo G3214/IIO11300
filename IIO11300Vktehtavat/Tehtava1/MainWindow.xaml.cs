@@ -19,17 +19,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Tehtava1
 {
-  /// <summary>
-  /// Interaction logic for MainWindow.xaml
-  /// </summary>
-  public partial class MainWindow : Window
-  {
-    public MainWindow()
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
     {
-      InitializeComponent();
-    }
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
         private void btnCalculate_Click(object sender, RoutedEventArgs e)
         {
@@ -51,18 +52,10 @@ namespace Tehtava1
 
     private void btnClose_Click(object sender, RoutedEventArgs e)
     {
+            //sulkee käynnissä olevan sovelluksen
       Application.Current.Shutdown();
     }
   }
 
-  public class BusinessLogicWindow
-    {
-    /// <summary>
-    /// CalculatePerimeter calculates the perimeter of a window
-    /// </summary>
-    public static double CalculatePerimeter(double widht, double height)
-        {
-            throw new System.NotImplementedException();
-        }
-    }
+  
 }
