@@ -13,6 +13,7 @@ namespace Tehtava1
         /// </summary>
         public static double CalculatePerimeter(double widht, double height)
         {
+            return (widht * 2) + (height * 2);
             throw new System.NotImplementedException();
         }
     }
