@@ -16,5 +16,21 @@ namespace Tehtava1
             return (widht * 2) + (height * 2);
             throw new System.NotImplementedException();
         }
+
+
+        public static double CalculateWindowArea(double widht, double height, double frame)
+        {
+            return (widht - frame) * (height - frame);
+            throw new System.NotImplementedException();
+        }
+
+        public static double CalculateFrameArea(double widht, double height, double frame)
+        {
+            return (widht*height) - CalculateWindowArea(widht, height, frame);
+            //return 3.0;
+        }
+
+
+
     }
 }

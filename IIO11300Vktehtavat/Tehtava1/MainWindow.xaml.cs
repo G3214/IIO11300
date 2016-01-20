@@ -39,7 +39,20 @@ namespace Tehtava1
             {
                 double result;
                 result = BusinessLogicWindow.CalculatePerimeter(double.Parse(txtHeigt.Text.ToString()), double.Parse(txtWidht.Text.ToString()));
+                txtPerimeter.Text = result.ToString();
+
+                result = BusinessLogicWindow.CalculateWindowArea(double.Parse(txtHeigt.Text.ToString()),
+                                                                    double.Parse(txtWidht.Text.ToString()),
+                                                                    double.Parse(txtFrameWidith.Text.ToString()) );
                 txtWindowArea.Text = result.ToString();
+
+                result = BusinessLogicWindow.CalculateFrameArea(double.Parse(txtHeigt.Text.ToString()),
+                                                                    double.Parse(txtWidht.Text.ToString()),
+                                                                    double.Parse(txtFrameWidith.Text.ToString()) );
+                txtFrameArea.Text = result.ToString();
+
+                    
+
             }
             catch (Exception ex)
             {
