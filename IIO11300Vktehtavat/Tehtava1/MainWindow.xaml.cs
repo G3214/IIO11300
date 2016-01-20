@@ -37,6 +37,14 @@ namespace Tehtava1
             //TODO
             try
             {
+
+
+                if (double.Parse(txtHeigt.Text.ToString()) <= 0 || double.Parse(txtWidht.Text.ToString()) <= 0 || double.Parse(txtFrameWidith.Text.ToString()) <= 0)
+                {
+                    MessageBox.Show("Syötetty arvo on 0 tai pienempi. Määritä todelliset arvot");
+                    return;
+                }
+
                 double result;
                 result = BusinessLogicWindow.CalculatePerimeter(double.Parse(txtHeigt.Text.ToString()), double.Parse(txtWidht.Text.ToString()));
                 txtPerimeter.Text = result.ToString();
@@ -56,6 +64,8 @@ namespace Tehtava1
             }
             catch (Exception ex)
             {
+                
+
                 MessageBox.Show(ex.Message);
             }
             finally
