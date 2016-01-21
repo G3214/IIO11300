@@ -90,7 +90,11 @@ namespace Tehtava1
             ikk.Leveys = double.Parse(txtWidht.Text);
             ikk.Korkeus = double.Parse(txtHeigt.Text);
             //ikk.korkeus = double.Parse(txtHeigt.Text);
+            //pinta-alan laskeminen kutsumalla metodia 
             txtWindowArea.Text = ikk.LaskePintaAla().ToString();
+
+            //vaihtoehto 2, pinta-ala on olion ominaisuus
+            txtFrameArea.Text = ikk.PintaAla.ToString();
         }
     }
 

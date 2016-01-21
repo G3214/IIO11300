@@ -12,9 +12,28 @@ namespace JAMK.IT.IIO11300
         #region  Muuttujat (variables)
         private double korkeus; //taustamuuttuja
         private double leveys;
+        //private double pintaala;
         #endregion
 
         #region Ominaisuudet (properties)
+        //oliosuunnittelun aikana on päätetty että pinta-ala ja hinta ovat read-only ominaisuuksia 
+
+            public float Hinta
+        {
+
+            get
+            {
+                return LaskeHinta();
+            }
+
+        }
+
+        public double PintaAla
+        {
+            get {
+                return korkeus * leveys;
+            }
+        }
         public double Korkeus
         {
             get
@@ -47,6 +66,17 @@ namespace JAMK.IT.IIO11300
         {
             return korkeus * leveys;
         }
+
+        private float LaskeHinta()
+        {
+            //hinta lasketaan työn, ja materiaalimenekin ja katteen  avulla
+            float kate = 100;
+            float tyo = 200;
+            float materiaali;
+            materiaali = 100 * (float)(leveys * korkeus) /1000000;
+            return (kate + tyo + materiaali);
+        }
+
         #endregion
 
     }
