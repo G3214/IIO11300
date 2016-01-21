@@ -10,17 +10,43 @@ namespace JAMK.IT.IIO11300
     public class Ikkuna
     {
         #region  Muuttujat (variables)
-        private double korkeus;
+        private double korkeus; //taustamuuttuja
         private double leveys;
         #endregion
 
         #region Ominaisuudet (properties)
+        public double Korkeus
+        {
+            get
+            {
+                return korkeus;
+            }
+            set
+            {
+                //tässä kohdassa voisi tarvittaessa tehdä tarkistuksia
+                korkeus = value; // value on automaaginen 
+            }
+        }
+
+        public double Leveys
+        {
+            get { return leveys; }
+            set { leveys = value; }
+        }
+
+
+
+
         #endregion
 
         #region Konstruktorit (constructors)
         #endregion
 
         #region Metodit (methods)
+        public double LaskePintaAla()
+        {
+            return korkeus * leveys;
+        }
         #endregion
 
     }

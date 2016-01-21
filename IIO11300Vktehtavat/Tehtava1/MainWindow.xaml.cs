@@ -87,9 +87,9 @@ namespace Tehtava1
         {
             //olion avulla lasketaan pinta-ala piiri ja hinta
             Ikkuna ikk = new Ikkuna();
-            ikk.leveys = double.Parse(txtWidht.Text);
-            ikk.korkeus = double.Parse(txtHeigt.Text);
-            ikk.korkeus = double.Parse(txtHeigt.Text);
+            ikk.Leveys = double.Parse(txtWidht.Text);
+            ikk.Korkeus = double.Parse(txtHeigt.Text);
+            //ikk.korkeus = double.Parse(txtHeigt.Text);
             txtWindowArea.Text = ikk.LaskePintaAla().ToString();
         }
     }
