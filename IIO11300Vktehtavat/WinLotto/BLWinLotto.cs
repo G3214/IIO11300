@@ -9,6 +9,31 @@ namespace WinLotto
     class BLWinLotto
     {
 
+        private class Draw
+        {
+
+            #region variables
+            private int[] balls;
+            #endregion
+
+            #region constructors
+            #endregion
+
+
+            #region methods
+
+            #endregion
+
+
+
+        }
+
+        public class Suomi
+        {
+
+            
+
+        }
 
 
     }

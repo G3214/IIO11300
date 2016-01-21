@@ -7,11 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+
             </StackPanel>
+            <Label x:Name="lbChooseGame" Content="Choose the game"/>
+            <ComboBox x:Name="comboBox" Width="120"/>
+            
+            <Label x:Name="lbNoOfDraws" Content="Number of draws:"/>
+            
+            <Button x:Name="btDraw" Content="Draw"/>
+            <Button x:Name="btCrear" Content="Clear"/>
+            
+            <Label x:Name="lbDrawnNumbers" Content="Randomly drawn numbers:"/>
+           
+            <ListBox x:Name="lstDraw" Height="50" />
+
+            <Button x:Name="btClose" Content="Close"/>
+
         </StackPanel>
-        
-        
+
+
     </Grid>
 </Window>
