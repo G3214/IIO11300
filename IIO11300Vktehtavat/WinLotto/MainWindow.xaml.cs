@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Diagnostics;
+
 namespace WinLotto
 {
     /// <summary>
@@ -23,6 +25,13 @@ namespace WinLotto
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btDraw_Click(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("fuufufufu");
+
+            BLWinLotto.Suomi suomi = new BLWinLotto.Suomi();
         }
     }
 }
