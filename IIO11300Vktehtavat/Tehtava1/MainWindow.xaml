@@ -26,7 +26,9 @@
             </StackPanel>
             <StackPanel Orientation="Vertical">
         <Button x:Name="btnCalculate" Content="Laske pinta-ala ja piiri" Height="32" Width="180" Click="btnCalculate_Click" Margin="10,10,10,0"/>
+                <Button x:Name="btnCalculateOO" Content="Laske OO" Height="32" Width="180" Click="btnCalculateOO_Click" Margin="10,10,10,0"/>
                 <Button x:Name="btnClose" Content="Sulje" Height="32" Width="180" Click="btnClose_Click" Margin="10,10,10,0"/>
+                
             </StackPanel>
     </StackPanel>
   </Grid>

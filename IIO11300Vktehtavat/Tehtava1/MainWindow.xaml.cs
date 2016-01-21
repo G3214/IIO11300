@@ -19,6 +19,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using JAMK.IT.IIO11300;
+
 
 namespace Tehtava1
 {
@@ -80,7 +82,17 @@ namespace Tehtava1
             //sulkee käynnissä olevan sovelluksen
       Application.Current.Shutdown();
     }
-  }
+
+        private void btnCalculateOO_Click(object sender, RoutedEventArgs e)
+        {
+            //olion avulla lasketaan pinta-ala piiri ja hinta
+            Ikkuna ikk = new Ikkuna();
+            ikk.leveys = double.Parse(txtWidht.Text);
+            ikk.korkeus = double.Parse(txtHeigt.Text);
+            ikk.korkeus = double.Parse(txtHeigt.Text);
+            txtWindowArea.Text = ikk.LaskePintaAla().ToString();
+        }
+    }
 
   
 }

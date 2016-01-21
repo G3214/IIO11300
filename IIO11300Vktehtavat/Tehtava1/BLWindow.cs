@@ -4,8 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tehtava1
+namespace JAMK.IT.IIO11300
 {
+
+    public class Ikkuna
+    {
+        #region  Muuttujat (variables)
+        private double korkeus;
+        private double leveys;
+        #endregion
+
+        #region Ominaisuudet (properties)
+        #endregion
+
+        #region Konstruktorit (constructors)
+        #endregion
+
+        #region Metodit (methods)
+        #endregion
+
+    }
+
+
+
+    public class IkkunaV0
+    {
+        //joskus tehdään näin "oikaistaa"
+        public double korkeus;
+        public double leveys;
+        public double LaskePintaAla()
+        {
+            return korkeus * leveys;
+        }
+    }
+
     public class BusinessLogicWindow
     {
         /// <summary>
