@@ -44,8 +44,17 @@ namespace WinLotto
             }
             #endregion
 
-            #region EMPTY methods
+            #region methods 1
+            public int[] ReturnMainNumbers(int i)
+            {
+                //error handgling:
+                if (i < balls.Length)
+                {
+                   //todo
+                }
+                return balls.Take(i).ToArray(); 
 
+            }
             #endregion
 
 
@@ -56,6 +65,7 @@ namespace WinLotto
         {
             #region variables 1
             private static Draw draw = new Draw(39);
+            
             #endregion
 
             #region constructors 1
@@ -66,6 +76,10 @@ namespace WinLotto
             #endregion
 
             #region  EMTPY methods
+           public int[] GetMainRow()
+            {
+               return  draw.ReturnMainNumbers(7);
+            }
             #endregion
 
 

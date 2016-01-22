@@ -32,6 +32,12 @@ namespace WinLotto
             Debug.WriteLine("fuufufufu");
 
             BLWinLotto.Suomi suomi = new BLWinLotto.Suomi();
+
+            foreach (int i in suomi.GetMainRow())
+            {
+                Debug.Write(" " + i );
+
+            }
         }
     }
 }
