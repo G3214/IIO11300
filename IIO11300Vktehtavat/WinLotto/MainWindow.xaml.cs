@@ -29,9 +29,9 @@ namespace WinLotto
 
         private void btDraw_Click(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("fuufufufu");
+            
 
-            BLWinLotto.Suomi suomi = new BLWinLotto.Suomi();
+            BLWinLotto.Lotto suomi = new BLWinLotto.Lotto(39, 7, 3);
 
             foreach (int i in suomi.GetMainRow())
             {

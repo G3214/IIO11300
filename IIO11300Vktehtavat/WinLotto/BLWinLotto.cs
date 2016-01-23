@@ -50,18 +50,24 @@ namespace WinLotto
 
         }
 
-        public class Suomi
+        public class Lotto
         {
             #region variables 1
-            private static Draw draw = new Draw(39);
-            private  ushort mainRow = 7;
-            private  ushort extraRow = 3;
+            private static Draw draw; // = new Draw(39);
+            private ushort mainRow; //= 7;
+            private ushort extraRow; //= 3;
             #endregion
 
             #region constructors 1
-            public Suomi()
+            public Lotto(ushort biggestBall, ushort mainRow, ushort extraRow)
             {
-               
+
+                draw = new Draw(biggestBall);
+                this.mainRow = mainRow;
+                this.extraRow = extraRow;
+
+
+
 
             }
             #endregion
