@@ -38,6 +38,14 @@ namespace WinLotto
                 Debug.Write(" " + i );
 
             }
+
+            Debug.WriteLine("\n----------");
+
+            foreach (int i in suomi.GetExtraRow())
+            {
+                Debug.Write(" " + i);
+
+            }
         }
     }
 }

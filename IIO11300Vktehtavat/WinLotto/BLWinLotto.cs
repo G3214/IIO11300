@@ -22,24 +22,13 @@ namespace WinLotto
             #region constructors 1
             public Draw(int numberOfBalls)
             {
-                //MessageBox.Show(String.Format("Alustettu arvo on {0}", numberOfBalls.ToString()));
-
-                Console.WriteLine("slfjfjal jfa");
+               
 
                 balls = Enumerable.Range(0, numberOfBalls).Select(N => N+1).ToArray();
 
                 Random rnd = new Random();
                 balls = balls.OrderBy(N => rnd.Next()).ToArray();
-
-
-                foreach (int i in balls)
-                {
-
-                    Debug.WriteLine(i);
-                }
-
-                Debug.WriteLine("ashfakshfkahf");
-                
+  
 
             }
             #endregion
@@ -65,20 +54,27 @@ namespace WinLotto
         {
             #region variables 1
             private static Draw draw = new Draw(39);
-            
+            private  ushort mainRow = 7;
+            private  ushort extraRow = 3;
             #endregion
 
             #region constructors 1
             public Suomi()
             {
+               
 
             }
             #endregion
 
-            #region  EMTPY methods
+            #region methods 1
            public int[] GetMainRow()
             {
-               return  draw.ReturnMainNumbers(7);
+               return  draw.ReturnMainNumbers(mainRow);
+            }
+
+            public int[] GetExtraRow()
+            {
+               return  draw.ReturnMainNumbers(mainRow + extraRow).Skip(mainRow).ToArray();
             }
             #endregion
 
