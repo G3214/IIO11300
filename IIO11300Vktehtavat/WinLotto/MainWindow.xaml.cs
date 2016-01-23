@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using System.Diagnostics;
+//using System.Diagnostics;
 
 namespace WinLotto
 {
@@ -32,23 +32,6 @@ namespace WinLotto
 
            
             BLWinLotto.Lotto lotto = new BLWinLotto.Lotto(39, 7, 3);
-
-            foreach (int i in lotto.GetMainRow())
-            {
-                Debug.Write(" " + i );
-
-            }
-
-            Debug.WriteLine("\n----------");
-
-            foreach (int i in lotto.GetExtraRow())
-            {
-                Debug.Write(" " + i);
-
-            }
-
-            //resolve this later
-            //string temp = lotto.GetMainRow();
 
 
 
