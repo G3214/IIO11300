@@ -53,7 +53,7 @@ namespace WinLotto
 
 
             lstDraw.Items.Add(string.Join(" ", lotto.GetMainRow()));
-            lstDraw.Items.Add("fuufufu");
+            
         }
     }
 }
