@@ -31,9 +31,9 @@ namespace WinLotto
         {
             
 
-            BLWinLotto.Lotto suomi = new BLWinLotto.Lotto(39, 7, 3);
+            BLWinLotto.Lotto lotto = new BLWinLotto.Lotto(39, 7, 3);
 
-            foreach (int i in suomi.GetMainRow())
+            foreach (int i in lotto.GetMainRow())
             {
                 Debug.Write(" " + i );
 
@@ -41,11 +41,14 @@ namespace WinLotto
 
             Debug.WriteLine("\n----------");
 
-            foreach (int i in suomi.GetExtraRow())
+            foreach (int i in lotto.GetExtraRow())
             {
                 Debug.Write(" " + i);
 
             }
+
+            lstDraw.Items.Add(lotto.GetMainRow().Select(N => N) + " " + lotto.GetExtraRow());
+            lstDraw.Items.Add("fuufufu");
         }
     }
 }
