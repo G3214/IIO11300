@@ -29,8 +29,8 @@ namespace WinLotto
 
         private void btDraw_Click(object sender, RoutedEventArgs e)
         {
-            
 
+           
             BLWinLotto.Lotto lotto = new BLWinLotto.Lotto(39, 7, 3);
 
             foreach (int i in lotto.GetMainRow())
@@ -47,7 +47,12 @@ namespace WinLotto
 
             }
 
-            lstDraw.Items.Add(lotto.GetMainRow().Select(N => N) + " " + lotto.GetExtraRow());
+            //resolve this later
+            //string temp = lotto.GetMainRow();
+
+
+
+            lstDraw.Items.Add(string.Join(" ", lotto.GetMainRow()));
             lstDraw.Items.Add("fuufufu");
         }
     }
