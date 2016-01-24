@@ -35,7 +35,10 @@ namespace WinLotto
 
 
 
-            lstDraw.Items.Add(string.Join(" ", lotto.GetMainRow()));
+            lstDraw.Items.Add(string.Join(" ", lotto.GetMainRow())
+                +" - " +
+                string.Join(" ", lotto.GetExtraRow())
+                );
             
         }
     }
