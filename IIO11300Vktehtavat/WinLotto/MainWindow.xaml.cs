@@ -49,24 +49,21 @@ namespace WinLotto
                 case "Lotto":
                     
                     lstDraw.Items.Add(string.Join(" ", lotto.GetMainRow())
-                 + " - " +
-                string.Join(" ", lotto.GetExtraRow())
-                );
+                         + " - " +
+                        string.Join(" ", lotto.GetExtraRow())
+                        );
                     break;
 
                 case "Viking":
                     lstDraw.Items.Add(string.Join(" ", viking.GetMainRow()));
-                    
-
                     break;
 
                 case "Eurojackpot":
                     lstDraw.Items.Add(string.Join(" ", euroMain.GetMainRow())
-               + " - " +
-               string.Join(" ", euroStar.GetMainRow())
-               );
-                    
-                    break;
+                        + " - " +
+                    string.Join(" ", euroStar.GetMainRow())
+                        );
+                     break;
 
                 default:
                     MessageBox.Show("Something horrible happend");
@@ -78,6 +75,18 @@ namespace WinLotto
 
 
 
+        }
+
+        private void btClear_Click(object sender, RoutedEventArgs e)
+        {
+            
+            lstDraw.Items.Clear(); 
+           
+        }
+
+        private void btClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

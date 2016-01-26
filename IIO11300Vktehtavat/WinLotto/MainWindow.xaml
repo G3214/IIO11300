@@ -17,13 +17,13 @@
             <Label x:Name="lbNoOfDraws" Content="Number of draws:"/>
             
             <Button x:Name="btDraw" Content="Draw" Click="btDraw_Click"/>
-            <Button x:Name="btCrear" Content="Clear"/>
+            <Button x:Name="btClear" Content="Clear" Click="btClear_Click"/>
             
             <Label x:Name="lbDrawnNumbers" Content="Randomly drawn numbers:"/>
            
             <ListBox x:Name="lstDraw" Height="50" />
 
-            <Button x:Name="btClose" Content="Close"/>
+            <Button x:Name="btClose" Content="Close" Click="btClose_Click"/>
 
         </StackPanel>
 
