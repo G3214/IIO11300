@@ -25,6 +25,9 @@ namespace WinLotto
         public MainWindow()
         {
             InitializeComponent();
+            comboBox.Items.Add("koira");
+
+            comboBox.SelectedIndex = 0;
         }
 
         private void btDraw_Click(object sender, RoutedEventArgs e)
@@ -32,14 +35,30 @@ namespace WinLotto
 
            
             BLWinLotto.Lotto lotto = new BLWinLotto.Lotto(39, 7, 3);
+            BLWinLotto.Lotto viking = new BLWinLotto.Lotto(48, 6, 0);
+
+           BLWinLotto.Lotto euroMain = new BLWinLotto.Lotto(50, 5, 0);
+           BLWinLotto.Lotto euroStar = new BLWinLotto.Lotto(10, 2, 0);
 
 
 
+            /*
             lstDraw.Items.Add(string.Join(" ", lotto.GetMainRow())
                 +" - " +
                 string.Join(" ", lotto.GetExtraRow())
                 );
-            
+                */
+
+            //lstDraw.Items.Add(string.Join(" ", viking.GetMainRow()));
+
+           lstDraw.Items.Add(string.Join(" ", euroMain.GetMainRow())
+               + " - " +
+               string.Join(" ", euroStar.GetMainRow())
+               );
+           
+
+
+
         }
     }
 }

@@ -32,6 +32,7 @@ namespace Tehtava1
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void btnCalculate_Click(object sender, RoutedEventArgs e)

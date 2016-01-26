@@ -53,7 +53,7 @@ namespace WinLotto
         public class Lotto
         {
             #region variables 1
-            private static Draw draw; // = new Draw(39);
+            private Draw draw; // = new Draw(39);
             private ushort mainRow; //= 7;
             private ushort extraRow; //= 3;
             #endregion
