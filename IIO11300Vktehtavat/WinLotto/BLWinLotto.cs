@@ -11,6 +11,10 @@ namespace WinLotto
 {
     class BLWinLotto
     {
+        class Global
+        {
+            public const string[3] games = { "Lotto", "Viking", "Eurojackpot" };
+        }
 
         private class Draw
         {
