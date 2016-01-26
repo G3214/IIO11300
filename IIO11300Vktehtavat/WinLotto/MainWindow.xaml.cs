@@ -25,7 +25,10 @@ namespace WinLotto
         public MainWindow()
         {
             InitializeComponent();
-            comboBox.Items.Add("koira");
+            string[] games = {"Lotto", "Viking", "Eurojackpot" };
+            comboBox.Items.Add("Lotto");
+            comboBox.Items.Add("Viking");
+            comboBox.Items.Add("Eurojackpot");
 
             comboBox.SelectedIndex = 0;
         }
@@ -40,22 +43,38 @@ namespace WinLotto
            BLWinLotto.Lotto euroMain = new BLWinLotto.Lotto(50, 5, 0);
            BLWinLotto.Lotto euroStar = new BLWinLotto.Lotto(10, 2, 0);
 
+            string gameType = comboBox.SelectedItem.ToString();
 
-
-            /*
-            lstDraw.Items.Add(string.Join(" ", lotto.GetMainRow())
-                +" - " +
+            switch (gameType) {
+                case "Lotto":
+                    
+                    lstDraw.Items.Add(string.Join(" ", lotto.GetMainRow())
+                 + " - " +
                 string.Join(" ", lotto.GetExtraRow())
                 );
-                */
+                    break;
 
-            //lstDraw.Items.Add(string.Join(" ", viking.GetMainRow()));
+                case "Viking":
+                    lstDraw.Items.Add(string.Join(" ", viking.GetMainRow()));
+                    
 
-           lstDraw.Items.Add(string.Join(" ", euroMain.GetMainRow())
+                    break;
+
+                case "Eurojackpot":
+                    lstDraw.Items.Add(string.Join(" ", euroMain.GetMainRow())
                + " - " +
                string.Join(" ", euroStar.GetMainRow())
                );
-           
+                    
+                    break;
+
+                default:
+                    MessageBox.Show("Something horrible happend");
+                    return;
+
+            }
+
+            
 
 
 
