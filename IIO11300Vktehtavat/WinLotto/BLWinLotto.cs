@@ -13,7 +13,7 @@ namespace WinLotto
     {
         class Global
         {
-            public const string[3] games = { "Lotto", "Viking", "Eurojackpot" };
+            //public string[] games = { "Lotto", "Viking", "Eurojackpot" };
         }
 
         private class Draw

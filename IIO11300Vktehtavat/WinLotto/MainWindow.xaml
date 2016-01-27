@@ -21,7 +21,7 @@
             
             <Label x:Name="lbDrawnNumbers" Content="Randomly drawn numbers:"/>
            
-            <ListBox x:Name="lstDraw" Height="50" />
+            <ListBox x:Name="lstDraw" Height="150" />
 
             <Button x:Name="btClose" Content="Close" Click="btClose_Click"/>
 

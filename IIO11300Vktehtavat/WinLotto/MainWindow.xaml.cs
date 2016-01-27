@@ -26,9 +26,9 @@ namespace WinLotto
         {
             InitializeComponent();
             //global const string[] games = {"Lotto", "Viking", "Eurojackpot" };
-            comboBox.Items.Add(games[0].ToString());
-            comboBox.Items.Add(games[1].ToString());
-            comboBox.Items.Add(games[2].ToString());
+            comboBox.Items.Add("Lotto");
+            comboBox.Items.Add("Viking");
+            comboBox.Items.Add("Eurojackpot");
 
             comboBox.SelectedIndex = 0;
         }
@@ -46,7 +46,7 @@ namespace WinLotto
             string gameType = comboBox.SelectedItem.ToString();
 
             switch (gameType) {
-                case  :
+                case  "Lotto":
                     
                     lstDraw.Items.Add(string.Join(" ", lotto.GetMainRow())
                          + " - " +
